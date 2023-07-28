@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Hide Shorts on Subscription Page Extension",
+    "version": "1.0",
+    "description": "This extension hides the Shorts section inside subscriptions page on YouTube.",
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/feed/subscriptions/*"],
+        "js": ["content_script.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "permissions": ["activeTab"],
+    "browser_action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
